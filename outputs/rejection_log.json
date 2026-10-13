@@ -1,0 +1,583 @@
+[
+  {
+    "timestamp": "2026-10-13T09:13:05.754269+00:00",
+    "topic": "Introduction to RAG",
+    "attempt": 1,
+    "passed": true,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": true,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "beginner_friendly": true
+    },
+    "failed_checks": [],
+    "feedback": []
+  },
+  {
+    "timestamp": "2026-10-13T09:17:54.113758+00:00",
+    "topic": "Introduction to RAG",
+    "attempt": 1,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "beginner_friendly": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": []
+  },
+  {
+    "timestamp": "2026-10-13T09:17:54.137169+00:00",
+    "topic": "Introduction to RAG",
+    "attempt": 2,
+    "passed": true,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": true,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "beginner_friendly": true
+    },
+    "failed_checks": [],
+    "feedback": [
+      "Please fix the failed requirement: practical_example"
+    ]
+  },
+  {
+    "timestamp": "2026-10-13T09:24:03.294317+00:00",
+    "topic": "Introduction to RAG",
+    "attempt": 1,
+    "passed": true,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": true,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "beginner_friendly": true
+    },
+    "failed_checks": [],
+    "feedback": []
+  },
+  {
+    "timestamp": "2026-10-13T09:29:41.948089+00:00",
+    "topic": "Retry limit test",
+    "attempt": 1,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "beginner_friendly": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": []
+  },
+  {
+    "timestamp": "2026-10-13T09:29:41.960073+00:00",
+    "topic": "Retry limit test",
+    "attempt": 2,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "beginner_friendly": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": [
+      "Please fix the failed requirement: practical_example"
+    ]
+  },
+  {
+    "timestamp": "2026-10-13T09:29:41.975318+00:00",
+    "topic": "Retry limit test",
+    "attempt": 3,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "beginner_friendly": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": [
+      "Please fix the failed requirement: practical_example"
+    ]
+  },
+  {
+    "timestamp": "2026-10-13T09:31:06.618994+00:00",
+    "topic": "Retry limit test",
+    "attempt": 1,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "beginner_friendly": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": []
+  },
+  {
+    "timestamp": "2026-10-13T09:31:06.634718+00:00",
+    "topic": "Retry limit test",
+    "attempt": 2,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "beginner_friendly": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": [
+      "Please fix the failed requirement: practical_example"
+    ]
+  },
+  {
+    "timestamp": "2026-10-13T09:31:06.650084+00:00",
+    "topic": "Retry limit test",
+    "attempt": 3,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "beginner_friendly": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": [
+      "Please fix the failed requirement: practical_example"
+    ]
+  },
+  {
+    "timestamp": "2026-10-13T09:32:42.189450+00:00",
+    "topic": "Retry limit test",
+    "attempt": 1,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "beginner_friendly": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": []
+  },
+  {
+    "timestamp": "2026-10-13T09:32:42.201141+00:00",
+    "topic": "Retry limit test",
+    "attempt": 2,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "beginner_friendly": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": [
+      "Please fix the failed requirement: practical_example"
+    ]
+  },
+  {
+    "timestamp": "2026-10-13T09:32:42.214968+00:00",
+    "topic": "Retry limit test",
+    "attempt": 3,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "beginner_friendly": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": [
+      "Please fix the failed requirement: practical_example"
+    ]
+  },
+  {
+    "timestamp": "2026-10-13T09:37:28.604123+00:00",
+    "topic": "Retry limit test",
+    "attempt": 1,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "beginner_friendly": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": []
+  },
+  {
+    "timestamp": "2026-10-13T09:37:28.619283+00:00",
+    "topic": "Retry limit test",
+    "attempt": 2,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "beginner_friendly": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": [
+      "Please fix the failed requirement: practical_example"
+    ]
+  },
+  {
+    "timestamp": "2026-10-13T09:37:28.634692+00:00",
+    "topic": "Retry limit test",
+    "attempt": 3,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "beginner_friendly": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": [
+      "Please fix the failed requirement: practical_example"
+    ]
+  },
+  {
+    "timestamp": "2026-10-13T09:39:21.195314+00:00",
+    "topic": "Retry limit test",
+    "attempt": 1,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "limitations_explained": true,
+      "beginner_friendly": true,
+      "no_empty_lesson": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": []
+  },
+  {
+    "timestamp": "2026-10-13T09:39:21.207554+00:00",
+    "topic": "Retry limit test",
+    "attempt": 2,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "limitations_explained": true,
+      "beginner_friendly": true,
+      "no_empty_lesson": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": [
+      "Please fix the failed requirement: practical_example"
+    ]
+  },
+  {
+    "timestamp": "2026-10-13T09:39:21.221915+00:00",
+    "topic": "Retry limit test",
+    "attempt": 3,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "limitations_explained": true,
+      "beginner_friendly": true,
+      "no_empty_lesson": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": [
+      "Please fix the failed requirement: practical_example"
+    ]
+  },
+  {
+    "timestamp": "2026-10-13T09:42:44.857112+00:00",
+    "topic": "Retry limit test",
+    "attempt": 1,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "limitations_explained": true,
+      "beginner_friendly": true,
+      "no_empty_lesson": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": []
+  },
+  {
+    "timestamp": "2026-10-13T09:42:44.868888+00:00",
+    "topic": "Retry limit test",
+    "attempt": 2,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "limitations_explained": true,
+      "beginner_friendly": true,
+      "no_empty_lesson": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": [
+      "Please fix the failed requirement: practical_example"
+    ]
+  },
+  {
+    "timestamp": "2026-10-13T09:42:44.881918+00:00",
+    "topic": "Retry limit test",
+    "attempt": 3,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "limitations_explained": true,
+      "beginner_friendly": true,
+      "no_empty_lesson": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": [
+      "Please fix the failed requirement: practical_example"
+    ]
+  },
+  {
+    "timestamp": "2026-10-13T09:49:44.744322+00:00",
+    "topic": "Introduction to RAG",
+    "attempt": 1,
+    "passed": true,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": true,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "limitations_explained": true,
+      "beginner_friendly": true,
+      "no_empty_lesson": true
+    },
+    "failed_checks": [],
+    "feedback": []
+  },
+  {
+    "timestamp": "2026-10-13T09:54:30.398950+00:00",
+    "topic": "Retry limit test",
+    "attempt": 1,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "limitations_explained": true,
+      "beginner_friendly": true,
+      "no_empty_lesson": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": []
+  },
+  {
+    "timestamp": "2026-10-13T09:54:30.412049+00:00",
+    "topic": "Retry limit test",
+    "attempt": 2,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "limitations_explained": true,
+      "beginner_friendly": true,
+      "no_empty_lesson": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": [
+      "Please fix the failed requirement: practical_example",
+      "This requirement has failed before. Pay extra attention to: practical_example"
+    ]
+  },
+  {
+    "timestamp": "2026-10-13T09:54:30.424459+00:00",
+    "topic": "Retry limit test",
+    "attempt": 3,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "limitations_explained": true,
+      "beginner_friendly": true,
+      "no_empty_lesson": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": [
+      "Please fix the failed requirement: practical_example",
+      "This requirement has failed before. Pay extra attention to: practical_example"
+    ]
+  },
+  {
+    "timestamp": "2026-10-13T10:22:08.829859+00:00",
+    "topic": "Introduction to RAG",
+    "attempt": 1,
+    "passed": false,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": false,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "limitations_explained": true,
+      "beginner_friendly": true,
+      "no_empty_lesson": true
+    },
+    "failed_checks": [
+      "practical_example"
+    ],
+    "feedback": []
+  },
+  {
+    "timestamp": "2026-10-13T10:22:08.868017+00:00",
+    "topic": "Introduction to RAG",
+    "attempt": 2,
+    "passed": true,
+    "checks": {
+      "definition": true,
+      "importance": true,
+      "working_steps": true,
+      "practical_example": true,
+      "jargon_explained": true,
+      "key_concepts": true,
+      "limitations_explained": true,
+      "beginner_friendly": true,
+      "no_empty_lesson": true
+    },
+    "failed_checks": [],
+    "feedback": [
+      "Please fix the failed requirement: practical_example",
+      "This requirement has failed before. Pay extra attention to: practical_example"
+    ]
+  }
+]
