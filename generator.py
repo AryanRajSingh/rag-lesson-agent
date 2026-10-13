@@ -1,98 +1,105 @@
 
+import os
+from google import genai
+
+MODEL_NAME = "gemini-3.5-flash-lite"
+
+
 def generate_lesson(topic, feedback=None, simulate_error=False):
-    """Create an offline lesson for workflow testing."""
+    """Generate a beginner-friendly lesson using Gemini."""
 
-    lesson = f"""# {topic}
+    api_key = os.getenv("GEMINI_API_KEY")
+    if not api_key:
+        raise RuntimeError(
+            "GEMINI_API_KEY is not configured. "
+            "Set it in your terminal before running the workflow."
+        )
 
-## 1. What is RAG?
+    client = genai.Client(
+        api_key=api_key,
+        http_options={"timeout": 60000},
+    )
 
-RAG stands for Retrieval-Augmented Generation.
-It helps an AI system find relevant information from
-documents before generating an answer.
-
-## 2. Why does RAG matter?
-
-An AI model may not know the latest information
-or private information stored in your documents.
-RAG provides relevant information to help the model
-answer questions using those documents.
-
-## 3. How does RAG work?
-
-Step 1: A user asks a question.
-Step 2: The system searches relevant documents.
-Step 3: It retrieves useful information from those documents.
-Step 4: The AI model uses that information to generate an answer.
-
-## 4. Example
-
-Imagine a college has hundreds of pages of student rules.
-A student asks, "What is the attendance requirement?"
-
-A RAG system searches the college documents, retrieves
-the relevant attendance rule, and uses it to help
-generate an answer.
-
-## 5. Important terms
-
-Retrieval means finding relevant information.
-Generation means creating a response.
-A document is a source of information, such as a text file.
-
-## 6. Summary
-
-RAG combines information retrieval with AI text generation.
-It can help answers use relevant documents, but answer
-quality depends on the documents retrieved and how
-the model uses that information.
-"""
-
-    # Testing only: deliberately remove the example.
-    if simulate_error and not feedback:
-        start = lesson.find("## 4. Example")
-        end = lesson.find("## 5. Important terms")
-
-        if start != -1 and end != -1:
-            lesson = lesson[:start] + lesson[end:]
-
-    # Restore the example if the evaluator reports a failure.
+    feedback_text = ""
     if feedback:
-        feedback_text = " ".join(feedback).lower()
-
-        needs_example = (
-            "practical_example" in feedback_text
-            or "practical example" in feedback_text
+        feedback_text = (
+            "\n\nEvaluator feedback from the previous attempt:\n- "
+            + "\n- ".join(feedback)
+            + "\nFix every listed issue. Keep content that already "
+            "satisfies the requirements."
         )
 
-        example_missing = (
-            "## 4. example" not in lesson.lower()
-            or "student" not in lesson.lower()
-            or "college" not in lesson.lower()
-            or "asks" not in lesson.lower()
-        )
+    prompt = f"""
+You are a patient teacher writing a standalone beginner lesson.
 
-        if needs_example and example_missing:
-            example_section = """## 4. Example
+Topic: {topic}
 
-Imagine a college stores its student rules in documents.
-A student asks, "What is the attendance requirement?"
+Assume the learner is starting from zero.
+Write approximately 400-700 words in simple English.
 
-The RAG system searches the college documents and retrieves
-the relevant attendance rule. The AI model uses that
-information to help generate an answer.
+MANDATORY REQUIREMENTS:
 
-This example shows how a question is connected to relevant
-documents before the answer is generated.
+1. Define the topic clearly in simple English.
+2. For RAG, include the exact phrase
+   "Retrieval-Augmented Generation".
+3. Explain why the topic matters and when it is useful.
+4. Explain the workflow in 3-5 numbered steps.
+5. For RAG, explain how a question leads to document retrieval
+   and then to answer generation.
+6. Include a heading containing the word "Example".
+7. In the example, show a realistic question, relevant
+   document information, and the resulting answer.
+8. Explain at least two technical terms in simple language.
+9. Include the concepts retrieval, documents, model,
+   and generation in meaningful sentences.
+10. Explain at least one limitation honestly.
+11. For RAG, explain that retrieving documents does not
+    guarantee that every generated answer is correct.
+12. Finish with a heading containing the word "Summary".
+13. Use clear Markdown headings, lists, and paragraphs.
+14. Use proper spaces between words and sentences.
+15. Avoid unexplained jargon and unsupported factual claims.
+16. Do not invent sources or pretend to have searched
+    documents that were not provided.
+17. Return only the lesson, without commentary about
+    these instructions.
+
+Before returning the lesson, check that all requirements
+are covered and that the writing is readable.
+
+{feedback_text}
 """
-            marker = "## 5. Important terms"
 
-            if marker in lesson:
-                lesson = lesson.replace(
-                    marker,
-                    example_section + "\n" + marker,
-                    1,
-                )
-            else:
-                lesson += "\n" + example_section
+    interaction = client.interactions.create(
+        model=MODEL_NAME,
+        input=prompt,
+    )
+
+    lesson = (interaction.output_text or "").strip()
+
+    if not lesson:
+        raise RuntimeError("Gemini returned an empty lesson.")
+
+    # Demo-only: deliberately remove the Example section
+    # so the evaluator can detect a missing requirement.
+    if simulate_error and not feedback:
+        lines = lesson.splitlines()
+        filtered = []
+        skipping = False
+
+        for line in lines:
+            is_heading = line.strip().startswith("#")
+
+            if is_heading and "example" in line.lower():
+                skipping = True
+                continue
+
+            if skipping and is_heading:
+                skipping = False
+
+            if not skipping:
+                filtered.append(line)
+
+        lesson = "\n".join(filtered)
 
     return lesson
