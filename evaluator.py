@@ -41,6 +41,11 @@ def evaluate_lesson(lesson):
             "external collection of texts",
             "search specific documents",
             "searches relevant documents",
+            "look up relevant information in documents",
+            "look up relevant information",
+            "uses relevant information in documents",
+            "finds relevant information in documents",
+            "searches stored documents",
         )
     )
 
@@ -60,6 +65,11 @@ def evaluate_lesson(lesson):
             "incorrect answers",
             "more accurate",
             "trusted information",
+            "company policies",
+            "manuals",
+            "stored documents",
+            "relevant information",
+            "specific information",
         )
     )
 
@@ -121,6 +131,10 @@ def evaluate_lesson(lesson):
                 "find the relevant documents",
                 "searches stored files",
                 "scans through stored files",
+            "retrieval means searching through documents",
+            "searching through documents to find",
+            "look up relevant information in documents",
+            "looks up relevant information",
             )
         )
     )
@@ -147,6 +161,10 @@ def evaluate_lesson(lesson):
             "ai reads the combined text",
             "writes the answer",
             "writes an answer based on",
+            "generation means the ai writes an answer",
+            "ai writes an answer using the information",
+            "uses the information it receives",
+            "writes an answer or response",
         )
         or (
             "generation" in text

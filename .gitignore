@@ -3,3 +3,16 @@ __pycache__/
 *.py[cod]
 .env
 .vscode/
+
+# Temporary backups and diagnostic files
+*.bak
+evaluator_copy.txt
+generator_copy.txt
+recent_log.txt
+retry_section.txt
+fix_lessonai_phrases.py
+fix_retry_feedback.py
+lessonai_diagnostic_fix.py
+
+# Local generation history (keep the file on this computer)
+outputs/rejection_log.json

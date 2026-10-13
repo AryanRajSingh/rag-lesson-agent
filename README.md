@@ -125,3 +125,13 @@ This is a lightweight, rule-based memory mechanism. It does not automatically re
 ## Repository hygiene
 
 Keep `.env`, API keys, `.venv`, and Python cache files out of version control. Never commit credentials or include them in screenshots or demo recordings.
+
+## Run the Streamlit UI
+
+Set your GEMINI_API_KEY environment variable, then run:
+
+```powershell
+python -m streamlit run streamlit_app.py
+```
+
+Open the local URL shown in the terminal, usually http://localhost:8501. Generation requires an available Gemini API quota.

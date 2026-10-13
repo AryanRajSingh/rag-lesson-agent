@@ -17,7 +17,7 @@ def generate_lesson(topic, feedback=None, simulate_error=False):
 
     client = genai.Client(
         api_key=api_key,
-        http_options={"timeout": 60000},
+        http_options={"timeout": 120000},
     )
 
     feedback_text = ""
@@ -66,6 +66,19 @@ MANDATORY REQUIREMENTS:
 
 Before returning the lesson, check that all requirements
 are covered and that the writing is readable.
+
+Make the definition explicit: state that RAG stands for Retrieval-Augmented
+Generation and explain that it looks up relevant information in documents
+before an AI model writes an answer.
+
+Explain both technical terms in simple, direct sentences:
+- Retrieval means searching through documents to find relevant information.
+- Generation means the AI writes an answer using the information it receives.
+
+In the importance section, explain a concrete benefit such as answering
+questions about company policies, manuals, or other stored documents.
+In the example, label the question, relevant document information, and
+resulting answer clearly. Preserve sections that already meet requirements.
 
 {feedback_text}
 """
