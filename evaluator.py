@@ -24,7 +24,6 @@ def evaluate_lesson(lesson):
     def contains_any(*phrases):
         return any(phrase in text for phrase in phrases)
 
-    # 1. Topic definition and explanation of retrieval.
     definition = (
         contains_any(
             "retrieval-augmented generation",
@@ -49,7 +48,6 @@ def evaluate_lesson(lesson):
         )
     )
 
-    # 2. Why RAG is useful.
     importance = (
         has_heading("why", "importance", "benefit")
         and contains_any(
@@ -73,7 +71,6 @@ def evaluate_lesson(lesson):
         )
     )
 
-    # 3. A process with ordered steps.
     numbered_steps = sum(
         bool(re.match(r"^\s*\d+[\s:.)-]", line))
         for line in lesson.splitlines()
@@ -85,7 +82,7 @@ def evaluate_lesson(lesson):
         and contains_any("generate", "generation", "writes a final answer")
     )
 
-    # 4. A practical example with a question and result.
+
     practical_example = (
         has_heading("example", "scenario", "walkthrough")
         and contains_any(
@@ -101,8 +98,6 @@ def evaluate_lesson(lesson):
             "question",
         )
     )
-
-    # 5. Technical terms explained in simple language.
 
     retrieval_explained = (
         contains_any(
@@ -185,7 +180,6 @@ def evaluate_lesson(lesson):
         retrieval_explained and generation_explained
     )
 
-    # 6. Essential concepts are present.
     key_concepts = all(
         contains_any(term)
         for term in [
@@ -196,7 +190,6 @@ def evaluate_lesson(lesson):
         ]
     )
 
-    # 7. At least one genuine limitation is described.
     limitations_explained = (
         has_heading("limitation", "what rag cannot do")
         and contains_any(
@@ -212,7 +205,6 @@ def evaluate_lesson(lesson):
         )
     )
 
-    # 8. Sufficient length and a concluding section.
     beginner_friendly = (
         150 <= len(words) <= 1200
         and has_heading("summary", "key takeaway", "conclusion")

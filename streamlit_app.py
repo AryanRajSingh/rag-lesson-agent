@@ -188,14 +188,12 @@ with tab_generate:
 
                 status_area.write("Lesson rejected. Feedback will be sent to the next attempt.")
 
-                # Give the generator actionable feedback for every current failure.
                 current_failures = list(result["failed_checks"])
                 feedback = [
                     f"The previous lesson failed the '{check}' requirement. Revise it to satisfy this requirement explicitly."
                     for check in current_failures
                 ]
 
-                # Emphasize failures seen in saved history.
                 recurring_failures = dict(learning.get("recurring_failures", []))
                 for check in current_failures:
                     previous_count = recurring_failures.get(check, 0)

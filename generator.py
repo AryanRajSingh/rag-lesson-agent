@@ -93,8 +93,6 @@ resulting answer clearly. Preserve sections that already meet requirements.
     if not lesson:
         raise RuntimeError("Gemini returned an empty lesson.")
 
-    # Demo-only: deliberately remove the Example section
-    # so the evaluator can detect a missing requirement.
     if simulate_error and not feedback:
         lines = lesson.splitlines()
         filtered = []

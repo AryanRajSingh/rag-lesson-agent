@@ -76,7 +76,6 @@ def run_workflow(topic, simulate_error=False):
             for check in result["failed_checks"]
         ]
 
-        # Use past failure patterns to strengthen retry guidance.
         for check, count in learning["recurring_failures"]:
             if check in result["failed_checks"] and count >= 1:
                 feedback.append(
